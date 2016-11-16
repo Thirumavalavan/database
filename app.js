@@ -53,8 +53,8 @@ app.use(
 
 
 
-app.get('/', routes.index);
-app.get('/customers', customers.list);
+
+app.get('/', customers.list);
 app.get('/customers/add', customers.add);
 app.post('/customers/add', customers.save);
 app.get('/customers/delete/:id', customers.delete_customer);
