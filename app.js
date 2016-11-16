@@ -14,7 +14,9 @@ var app = express();
 
 var connection  = require('express-myconnection'); 
 var mysql = require('mysql');
+var fs = require('fs');
 
+var mysql = fs.readFileSync('node.sql').toString();
 // all environments
 app.set('port', process.env.PORT || 4300);
 app.set('views', path.join(__dirname, 'views'));
