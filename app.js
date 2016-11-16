@@ -64,6 +64,6 @@ app.post('/customers/edit/:id',customers.save_edit);
 
 app.use(app.router);
 
-http.createServer(app).listen(app.get('port'), function(){
+http.createServer(app).listen(process.env.PORT || app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
